@@ -27,16 +27,18 @@ end
 def anim(string)
   string.each_char do |n|
   print n
-  charWait = rand(0.09..0.15)
+  charWait = rand(0.05..0.15)
   sleep(charWait)
   end
 end
 
   if userQuestion == "" || userQuestion == " "
-  	print "Are you there?"
+  	print "Are you there?\n"
   	userResponse = gets.chomp
   	if userResponse == 'y' || userResponse == 'yes' || userResponse == 'yeah'
-  		AnimArr.qAnimArr
+  		anim("Well then...\n")
+      sleep 1
+      AnimArr.qAnimArr
   	else userResponse == 'n' || userResponse =='no' || userResponse == 'nah'
   		anim("Don't lie to me... Come on now...\n")
       sleep 1.5
@@ -46,7 +48,7 @@ end
     AnimArr2.qAnimArr2
   end
 
-# #write an array that stores comments that can be called upon and printed to the terminal.
+#write an array that stores comments that can be called upon and printed to the terminal.
 
 # puts "Give me a comment"
 # comment = gets.chomp
