@@ -33,18 +33,19 @@ end
 
 def play_again
 	sleep(1.5)
-	print "Need more answers?" + "\n"
+	print "Need more answers?\n"
 	user_choice = gets.chomp.downcase
 	magic_8_ball if user_choice != 'n' || user_choice != 'N'
 end
 
 def magic_8_ball
+  system("clear")
   puts "What is your Magic 8 Ball question?"
   userQuestion = gets.chomp
 
   if userQuestion == "" || userQuestion == " "
     print "Are you there?\n"
-    userResponse = gets.chomp
+    userResponse = gets.chomp.downcase
     if userResponse == 'y' || userResponse == 'yes' || userResponse == 'yeah'
       anim("Well then...\n")
       sleep 1
